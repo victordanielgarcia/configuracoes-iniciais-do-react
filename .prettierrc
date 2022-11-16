@@ -1,0 +1,27 @@
+{
+  "tabWidth": 2,
+  "printWidth": 100,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "jsxSingleQuote": true,
+  "bracketSpacing": true,
+  "importOrder": [
+    "react$",
+    "<THIRD_PARTY_MODULES>",
+    "modules/(.*)$",
+    "component/(.*)$",
+    "services/(.*)$",
+    "validations/(.*)$",
+    "primereact/(.*)$",
+    "primeicons/(.*)$",
+    "./assets/(.*)$",
+    "./components/(.*)$",
+    "./validations/(.*)$",
+    "styles/(.*)$",
+    "^@testing-library/react$",
+    "^@testing-library/jest-dom",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

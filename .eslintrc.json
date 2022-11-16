@@ -1,0 +1,141 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:import/warnings",
+    "plugin:import/errors"
+  ],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier",
+    "autofix",
+    "react-hooks",
+    "import"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "camelcase": "error",
+    "spaced-comment": "error",
+    "quotes": ["error", "single"],
+    "no-duplicate-imports": "error",
+    "react/self-closing-comp": ["error", { "component": true, "html": true }],
+    "react-hooks/exhaustive-deps": "error",
+    "object-curly-spacing": ["error", "always"],
+    "max-len": ["error", { "code": 100, "tabWidth": 2 }],
+    "indent": ["error", 2],
+    "autofix/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "ignoreRestSiblings": true,
+        "destructuredArrayIgnorePattern": "^_"
+      }
+    ],
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["../"]
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": ["external", ["internal", "parent", "sibling", "index"], "unknown"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "patternOptions": { "matchBase": true },
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "modules/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "components/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "services/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "validations/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "primereact/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "primeicons/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "styles/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "@testing-library/jest-dom",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "*.scss",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "*.css",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
