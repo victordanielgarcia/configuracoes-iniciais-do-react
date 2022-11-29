@@ -18,15 +18,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "react-hooks",
-    "@typescript-eslint",
-    "prettier",
-    "autofix",
-    "react-hooks",
-    "import"
-  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier", "autofix", "react-hooks", "import"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "camelcase": "error",
@@ -34,12 +26,13 @@
     "quotes": ["error", "single"],
     "no-duplicate-imports": "error",
     "react/self-closing-comp": ["error", { "component": true, "html": true }],
-    "react-hooks/exhaustive-deps": "error",
+    "react-hooks/exhaustive-deps": "off",
     "object-curly-spacing": ["error", "always"],
-    "max-len": ["error", { "code": 100, "tabWidth": 2 }],
+    "max-len": ["error", { "code": 120, "tabWidth": 2 }],
     "indent": ["error", 2],
+    "import/no-duplicates": ["off", { "considerQueryString": true }],
     "autofix/no-unused-vars": [
-      "error",
+      "off",
       {
         "argsIgnorePattern": "^_",
         "ignoreRestSiblings": true,
@@ -47,7 +40,7 @@
       }
     ],
     "no-restricted-imports": [
-      "error",
+      "off",
       {
         "patterns": ["../"]
       }
@@ -64,19 +57,122 @@
             "position": "before"
           },
           {
+            "pattern": "primereact/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "../../formErrors/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+
+          {
+            "pattern": "../firebase/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "firebase/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "date-fns/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "date-fns",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
             "pattern": "modules/**",
             "patternOptions": { "matchBase": true },
             "group": "unknown",
             "position": "after"
           },
           {
-            "pattern": "components/**",
+            "pattern": "./hooks/**",
             "patternOptions": { "matchBase": true },
             "group": "unknown",
             "position": "after"
           },
           {
-            "pattern": "services/**",
+            "pattern": "../hooks/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "./types/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "../types/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "../../types/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "../../../types/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "../components/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "../../components/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "../controllers/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "../../controllers/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "../functions/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "./services/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "./pages/**",
             "patternOptions": { "matchBase": true },
             "group": "unknown",
             "position": "after"
@@ -95,6 +191,18 @@
           },
           {
             "pattern": "primeicons/**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "./**",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "../**",
             "patternOptions": { "matchBase": true },
             "group": "unknown",
             "position": "after"
